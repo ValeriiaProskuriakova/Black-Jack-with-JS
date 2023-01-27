@@ -9,8 +9,19 @@ body {
     font-weight: bold;
     color: white;
     text-align: center;
+    gap:5em;
+    box-sizing: border-box;
 }
-.wrapper {
+.instruction {
+    width: 20em;
+} 
+.instruction p {
+    line-height: 1.5em;
+    color: goldenrod;
+    font-style:italic;
+    text-align: left;
+}
+.game {
   background-color:rgb(0,95,88);
   padding:2em;
   border-radius:5px;
@@ -29,19 +40,25 @@ h1+p{
 #message-el {
     font-style: italic;
 }
-
-button {
+.buttons {
+    margin: 2em 0;
+}
+.buttons a{
     color: #016f32;
-    width: 150px;
     background: goldenrod;
-    padding-top: 10px;
-    padding-bottom: 10px;
     font-weight: bold;
     border: none;
     border-radius: 2px;
-    margin-bottom: 2px;
-    margin-top: 2px;
+    cursor: pointer;
+    padding: 0.8em 2em;
+    margin: 1em;
 }
-button:first-of-type{
-  margin-right:8px;
+.buttons a:hover {
+    color: #fff;
+    border: 2px solid #fff;
+}
+.buttons a:active {
+    background: #FFD752;
+    color: #2a2006;
+    border-color: #2a2006;
 }

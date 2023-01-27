@@ -1,4 +1,9 @@
-let playerName = prompt("What is Your name?")
+let playerName;
+
+do {
+    playerName = prompt("What is Your name?")
+} 
+while(!playerName || !playerName.replace(/\s/g, '').length) 
 
 
 let player = {
@@ -81,3 +86,6 @@ function newCard() {
         renderGame()
     }
 }
+
+document.querySelector(".start").addEventListener("click", startGame)
+document.querySelector(".new_card").addEventListener("click", newCard)

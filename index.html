@@ -4,14 +4,25 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-      <div class="wrapper">
+      <div class="instruction">
+        <h1>Rules of the game</h1><br>
+        <p>The computer generates random cards, and each card contains a certain number of points.<br>
+          Ace is 11; Jack, Lady and the King are 10, and the rest of the cards' signs correspond to the points they contain.<br>
+          When the player has more than 21 points, 
+          the round is done, and the player loses 20$. <br>
+          In case of 21 points (Black Jack), player's money is doubled.
+          </p>
+      </div>
+      <div class="game">
         <h1>Blackjack</h1>
         <p>light</p>
         <p id="message-el">Want to play a round?</p>
         <p id="cards-el">Cards:</p>
         <p id="sum-el">Sum:</p>
-        <button onclick="startGame()">START GAME</button>
-        <button onclick="newCard()">NEW CARD</button>
+        <div class="buttons">
+          <a class="start">START GAME</a>
+          <a class="new_card">NEW CARD</a>
+        </div>
         <p id="player-el"></p>
       </div>
       <script src="script.js"></script>
