@@ -45,6 +45,7 @@ function startGame() {
 }
 
 function renderGame() {
+    let clazz;
     hasBlackJack = false;
     cardsEl.textContent = "Cards: "
     for (let i = 0; i < cards.length; i++) {
@@ -53,8 +54,11 @@ function renderGame() {
 
     sumEl.textContent = "Sum: " + sum
     if (sum <= 20) {
+        
         message = "Do you want to draw a new card?"
+        clazz = ''
     } else if (sum === 21) {
+        clazz = 'win'
         message = "You've got Blackjack!"
         hasBlackJack = true;
         if(player.chips > 0){
@@ -65,6 +69,8 @@ function renderGame() {
         }
     } else {
         message = "You're out of the game!"
+        clazz = 'lose'
+        
         isAlive = false
         if(player.chips > 0){
           player.chips = player.chips - 20
@@ -74,6 +80,7 @@ function renderGame() {
         }
     }
     messageEl.textContent = message
+    messageEl.className = clazz
     playerEl.textContent = player.name + ": $" + player.chips
 }
 

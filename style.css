@@ -62,3 +62,10 @@ h1+p{
     color: #2a2006;
     border-color: #2a2006;
 }
+.win {
+    text-shadow: -3px 2px 3px blue;
+    color: aqua;
+}
+.lose{
+    color: red;
+}
